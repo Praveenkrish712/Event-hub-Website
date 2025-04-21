@@ -1,0 +1,29 @@
+
+@keyframes ani-left {
+    0% {
+      opacity: 0;
+      margin-left: -400px;
+    }
+    80% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+      margin-left: 0;
+    }
+  }
+  @keyframes ani-right {
+    0% {
+      opacity: 0;
+      margin-right: -400px;
+    }
+    80% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+      margin-right: 0;
+    }
+  }
+  
+  
