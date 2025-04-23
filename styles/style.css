@@ -923,6 +923,11 @@
   justify-content: center;
   align-items: center;
   gap: 15px;
+  cursor: pointer;
+}
+
+.footer-icon svg{
+  fill: white;
 }
 
 .footer-page4 form {
