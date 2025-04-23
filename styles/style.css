@@ -62,6 +62,10 @@
   gap: 20px;
 }
 
+.header-logo-contanier svg{
+  fill: white;
+}
+
 .home-hover {
   display: none;
   position: absolute;
