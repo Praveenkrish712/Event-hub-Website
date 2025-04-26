@@ -16,9 +16,9 @@
   background-color: #c8f7ff;
 }
 
-.Event-hub::-webkit-scrollbar {
+/* .Event-hub::-webkit-scrollbar {
   display: none;
-}
+} */
 
 .header {
   width: 100%;
@@ -396,7 +396,15 @@
   border-radius: 15px;
 }
 
-.schedule-button button:hover {
+.schedule-button input{
+  border: 0;
+}
+
+.schedule-button input:focus{
+  outline: none;
+}
+
+.schedule-button input:hover {
   color: #f248b4;
   cursor: pointer;
 }
