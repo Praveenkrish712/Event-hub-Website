@@ -16,10 +16,6 @@
   background-color: #c8f7ff;
 }
 
-/* .Event-hub::-webkit-scrollbar {
-  display: none;
-} */
-
 .header {
   width: 100%;
   display: flex;
@@ -969,6 +965,7 @@
 }
 
 .menu-logo {
+  fill: white;
   display: none;
 }
 .mobile-view {
@@ -1021,6 +1018,10 @@
   }
   .menu-logo {
     display: block;
+  }
+
+  .header-logo-contanier{
+    display: none;
   }
 
   .header-menu {
