@@ -11,6 +11,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="form">
+        <svg
+              class="circle-x-logo"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+              onclick="callSite()"
+            >
+              <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z" />
+            </svg>
+        <div class="sponsor-form">
+            <h2>Become a Sponsor</h2>
+            <input type="text" placeholder="Name">
+            <input type="text" placeholder="Company name">
+            <input type="text" placeholder="Enter your E-mail">
+            <input type="text" placeholder="Address">
+            <button>Submit</button>
+        </div>
+    </div>
     <div class="Event-hub">
         <div class="mobile-view">
             <nav><svg class="x-mark-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg></nav>
@@ -159,7 +177,7 @@
             <button class="sponsor-button">OUR OFFICAL SPONSORS</button>
             <nav>
                 <h1>Trusted By Over 150<br>Organizations In More<br>Than 50 Countries</h1>
-                <button>BECOME A SPONSOR
+                <button onclick="callCompany()" class="company">BECOME A SPONSOR
                     <svg xmlns="http://www.w3.org/2000/svg" hight="15px" width="15px" viewBox="0 0 512 512"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l82.7 0L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3l0 82.7c0 17.7 14.3 32 32 32s32-14.3 32-32l0-160c0-17.7-14.3-32-32-32L320 0zM80 32C35.8 32 0 67.8 0 112L0 432c0 44.2 35.8 80 80 80l320 0c44.2 0 80-35.8 80-80l0-112c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 112c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-320c0-8.8 7.2-16 16-16l112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 32z"/></svg>
                 </button>
             </nav>
@@ -189,9 +207,11 @@
                 </div>
                 <nav>
                     <h1>$29.00</h1>
-                    <button>BUY TICKETS
-                        <svg xmlns="http://www.w3.org/2000/svg" width="15px" hight="15px" viewBox="0 0 512 512"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l82.7 0L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3l0 82.7c0 17.7 14.3 32 32 32s32-14.3 32-32l0-160c0-17.7-14.3-32-32-32L320 0zM80 32C35.8 32 0 67.8 0 112L0 432c0 44.2 35.8 80 80 80l320 0c44.2 0 80-35.8 80-80l0-112c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 112c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-320c0-8.8 7.2-16 16-16l112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 32z"/></svg>
-                    </button>
+                    <a href="https://www.npci.org.in/what-we-do/upi/product-overview">
+                        <button>BUY TICKETS
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15px" hight="15px" viewBox="0 0 512 512"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l82.7 0L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3l0 82.7c0 17.7 14.3 32 32 32s32-14.3 32-32l0-160c0-17.7-14.3-32-32-32L320 0zM80 32C35.8 32 0 67.8 0 112L0 432c0 44.2 35.8 80 80 80l320 0c44.2 0 80-35.8 80-80l0-112c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 112c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-320c0-8.8 7.2-16 16-16l112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 32z"/></svg>
+                        </button>
+                    </a>
                 </nav>
             </div>
             <div class="tickets-details">
@@ -201,9 +221,11 @@
                 </div>
                 <nav>
                     <h1>$39.00</h1>
-                    <button>BUY TICKETS
-                        <svg xmlns="http://www.w3.org/2000/svg" width="15px" hight="15px" viewBox="0 0 512 512"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l82.7 0L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3l0 82.7c0 17.7 14.3 32 32 32s32-14.3 32-32l0-160c0-17.7-14.3-32-32-32L320 0zM80 32C35.8 32 0 67.8 0 112L0 432c0 44.2 35.8 80 80 80l320 0c44.2 0 80-35.8 80-80l0-112c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 112c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-320c0-8.8 7.2-16 16-16l112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 32z"/></svg>
-                    </button>
+                    <a href="https://www.npci.org.in/what-we-do/upi/product-overview">
+                        <button>BUY TICKETS
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15px" hight="15px" viewBox="0 0 512 512"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l82.7 0L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3l0 82.7c0 17.7 14.3 32 32 32s32-14.3 32-32l0-160c0-17.7-14.3-32-32-32L320 0zM80 32C35.8 32 0 67.8 0 112L0 432c0 44.2 35.8 80 80 80l320 0c44.2 0 80-35.8 80-80l0-112c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 112c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-320c0-8.8 7.2-16 16-16l112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 32z"/></svg>
+                        </button>
+                    </a>
                 </nav>
             </div>
             <div class="tickets-details">
@@ -213,9 +235,11 @@
                 </div>
                 <nav>
                     <h1>$59.00</h1>
-                    <button>BUY TICKETS
-                        <svg xmlns="http://www.w3.org/2000/svg" width="15px" hight="15px" viewBox="0 0 512 512"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l82.7 0L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3l0 82.7c0 17.7 14.3 32 32 32s32-14.3 32-32l0-160c0-17.7-14.3-32-32-32L320 0zM80 32C35.8 32 0 67.8 0 112L0 432c0 44.2 35.8 80 80 80l320 0c44.2 0 80-35.8 80-80l0-112c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 112c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-320c0-8.8 7.2-16 16-16l112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 32z"/></svg>
-                    </button>
+                    <a href="https://www.npci.org.in/what-we-do/upi/product-overview">
+                        <button>BUY TICKETS
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15px" hight="15px" viewBox="0 0 512 512"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l82.7 0L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3l0 82.7c0 17.7 14.3 32 32 32s32-14.3 32-32l0-160c0-17.7-14.3-32-32-32L320 0zM80 32C35.8 32 0 67.8 0 112L0 432c0 44.2 35.8 80 80 80l320 0c44.2 0 80-35.8 80-80l0-112c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 112c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-320c0-8.8 7.2-16 16-16l112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 32z"/></svg>
+                        </button>
+                    </a>
                 </nav>
             </div>
         </div>
@@ -272,11 +296,25 @@
                 </div>
             </div>
         </div>
+       
         <script>
+            let Xlogo=document.querySelector(".circle-x-logo");
+            let company=document.querySelector(".company");
+            let eventhub=document.querySelector(".Event-hub");
+            let form=document.querySelector(".form");
             let mobileView = document.querySelector(".mobile-view");
             let menuLogo = document.querySelector(".menu-logo");
             let xLogo = document.querySelector(".x-mark-logo");
-        
+
+           function callCompany(){
+                eventhub.style.display="none";
+                form.style.display="flex";
+            }
+            function callSite() {
+                eventhub.style.display="block";
+                form.style.display="none";
+            }
+            
             menuLogo.addEventListener("click", function () {
                 mobileView.style.display = "block";
             });

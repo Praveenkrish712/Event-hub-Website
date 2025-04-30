@@ -6,7 +6,8 @@
   font-family: "unbounded", sans-serif;
 }
 
-.Event-hub {
+.Event-hub,
+.form {
   scroll-behavior: smooth;
   scroll-padding-top: 50px;
   height: 100vh;
@@ -58,7 +59,7 @@
   gap: 20px;
 }
 
-.header-logo-contanier svg{
+.header-logo-contanier svg {
   fill: white;
 }
 
@@ -279,7 +280,8 @@
   animation-range: entry 0% cover 30%;
 }
 
-.speakers2 {opacity: 0;
+.speakers2 {
+  opacity: 0;
   margin-left: -400px;
   display: flex;
   justify-content: start;
@@ -392,11 +394,11 @@
   border-radius: 15px;
 }
 
-.schedule-button input{
+.schedule-button input {
   border: 0;
 }
 
-.schedule-button input:focus{
+.schedule-button input:focus {
   outline: none;
 }
 
@@ -934,7 +936,7 @@
   cursor: pointer;
 }
 
-.footer-icon svg{
+.footer-icon svg {
   fill: white;
 }
 
@@ -1012,6 +1014,44 @@
   fill: red;
 }
 
+.form {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.circle-x-logo {
+  width: 20px;
+  height: 20px;
+  fill: red;
+  position: absolute;
+  cursor: pointer;
+  top: 15px;
+  right: 15px;
+}
+
+.sponsor-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  height: 400px;
+  width: 300px;
+  background-color: white;
+}
+
+.sponsor-form input {
+  padding: 10px;
+}
+
+.sponsor-form button {
+  border: 0;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f248b4;
+}
+
 @media (max-width: 1150px) {
   .header nav ul {
     display: none;
@@ -1020,7 +1060,7 @@
     display: block;
   }
 
-  .header-logo-contanier{
+  .header-logo-contanier {
     display: none;
   }
 
