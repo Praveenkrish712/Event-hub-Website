@@ -1250,6 +1250,11 @@
     flex-direction: row;
     overflow-y: scroll;
   }
+  .details-button img{
+    height: 300px;
+    width: 300px;
+    border-radius: 20px;
+  }
   .home-page {
     flex-wrap: wrap;
   }
