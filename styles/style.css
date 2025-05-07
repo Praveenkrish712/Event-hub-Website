@@ -7,7 +7,7 @@
 }
 
 .Event-hub,
-.form {
+.form, .details-button, .payment{
   scroll-behavior: smooth;
   scroll-padding-top: 50px;
   height: 100vh;
@@ -15,6 +15,10 @@
   overflow-y: scroll;
   overflow-x: hidden;
   background-color: #c8f7ff;
+}
+
+.details-button::-webkit-scrollbar{
+  display: none;
 }
 
 .header {
@@ -51,7 +55,9 @@
   padding: 40px 0px;
 }
 
-.header-logo-contanier {
+.header-logo-contanier>input {
+  padding: 5px;
+  border-radius: 5px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -154,6 +160,7 @@
   align-items: center;
   padding: 15px 20px;
   background-color: #f248b4;
+  border: 0;
   border-radius: 40px;
   color: white;
   font-weight: 600;
@@ -181,8 +188,10 @@
 
 .event-page button {
   padding: 10px;
+  word-spacing: 3px;
   margin-top: 70px;
   background-color: #5033ff;
+  border: 0;
   color: white;
   border-radius: 15px;
 }
@@ -243,6 +252,7 @@
   padding: 10px;
   margin-top: 70px;
   background-color: #5033ff;
+  border: 0;
   color: white;
   border-radius: 15px;
 }
@@ -359,6 +369,7 @@
   padding: 10px;
   margin-top: 70px;
   background-color: #5033ff;
+  border: 0;
   color: white;
   border-radius: 15px;
 }
@@ -440,6 +451,7 @@
 .time-schedule button {
   padding: 10px;
   background-color: #f248b4;
+  border: 0;
   color: white;
   border-radius: 15px;
 }
@@ -449,6 +461,10 @@
   align-items: center;
   justify-content: center;
   color: #494949;
+}
+
+.event-timing nav a{
+  text-decoration: none;
 }
 
 .event-timing nav button {
@@ -475,6 +491,7 @@
   margin-left: 19%;
   margin-bottom: 30px;
   background-color: #5033ff;
+  border: 0;
   color: white;
   border-radius: 15px;
 }
@@ -498,6 +515,7 @@
   gap: 5px;
   padding: 10px;
   background-color: #f248b4;
+  border: 0;
   color: white;
   border-radius: 15px;
   cursor: pointer;
@@ -656,6 +674,7 @@
   padding: 10px;
   margin-top: 70px;
   background-color: #5033ff;
+  border: 0;
   color: white;
   border-radius: 15px;
 }
@@ -711,6 +730,9 @@
 .tickets-details nav button {
   padding: 10px;
   background-color: #f248b4;
+  border: 0;
+  text-decoration: none;
+  cursor: pointer;
   color: white;
   border-radius: 15px;
   margin-top: 20px;
@@ -748,6 +770,7 @@
   padding: 10px;
   margin-top: 70px;
   background-color: #5033ff;
+  border: 0;
   color: white;
   border-radius: 15px;
 }
@@ -837,7 +860,6 @@
 
 .footer-section1 {
   height: 400px;
-  width: 100vw;
   background-color: #05061a;
   margin-top: 100px;
 }
@@ -1020,6 +1042,7 @@
   justify-content: center;
   position: relative;
 }
+
 .circle-x-logo {
   width: 20px;
   height: 20px;
@@ -1050,7 +1073,74 @@
   padding: 10px;
   border-radius: 5px;
   background-color: #f248b4;
+  cursor: pointer;
 }
+
+.details-button{
+  display: none;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 100px 0 50px 0;
+  overflow: hidden;
+}
+
+.details-button img{
+  height: 80%;
+  width: 50%;
+  border-radius: 50px;
+}
+
+.details-button1 h3{
+  text-align: center;
+  padding: 20px;
+}
+
+.details-button1 p{
+  padding: 5px;
+}
+
+.information{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.payment{
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 50px;
+}
+
+.payment h2{
+  padding: 20px;
+}
+
+.payment input{
+  padding: 10px 50px 10px 5px ;
+  margin: 5px;
+}
+
+.payment button{
+  margin-top: 20px;
+  color: white;
+  background-color: #f248b4;
+  padding: 10px;
+  border: 0;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 1150px) {
   .header nav ul {
@@ -1155,6 +1245,11 @@
   }
 }
 @media (max-width: 800px) {
+  .details-button{
+    flex-wrap: wrap;
+    flex-direction: row;
+    overflow-y: scroll;
+  }
   .home-page {
     flex-wrap: wrap;
   }
@@ -1179,3 +1274,8 @@
 }
 @media (max-width: 400px) {
 }
+
+
+
+
+
