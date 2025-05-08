@@ -463,71 +463,120 @@
   
 
 
+    document.getElementById('submitBtn').addEventListener('click', function () {
+    const nameInput = document.getElementById('name');
+    const companyInput = document.getElementById('company');
+    const emailInput = document.getElementById('email');
+    const addressInput = document.getElementById('address');
 
+    const name = nameInput.value.trim();
+    const company = companyInput.value.trim();
+    const email = emailInput.value.trim();
+    const address = addressInput.value.trim();
+
+    const nameValid = /^[A-Za-z\s]+$/.test(name);
+    const emailValid = email.endsWith('@gmail.com');
+    const allFilled = name && company && email && address;
+
+
+    if (!allFilled) {
+        alert("Please fill in all the fields.");
+        return;
+    }
+
+    if (!nameValid) {
+        alert("Name should contain only letters.");
+        return;
+    }
+
+    if (!emailValid) {
+        alert("Email must end with '@gmail.com'.");
+        return;
+    }
+
+
+    alert("Form submitted successfully!");
+
+
+    nameInput.value = '';
+    companyInput.value = '';
+    emailInput.value = '';
+    addressInput.value = '';
+});
         
 
-    document.getElementById('submitBtn').addEventListener('click', function () {
-            const name = document.getElementById('name').value.trim();
-            const company = document.getElementById('company').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const address = document.getElementById('address').value.trim();
+ 
+         
 
-            if (!name || !company || !email || !address) {
-                alert("Please fill out all fields");
-            } else {
-                alert("Form submitted successfully");
 
-                // Clear the form
-                document.getElementById('name').value = '';
-                document.getElementById('company').value = '';
-                document.getElementById('email').value = '';
-                document.getElementById('address').value = '';
-            }
-        });
-  
+ 
 
 
 
+document.getElementById('btn').addEventListener('click', function () {
+    const nameInput = document.getElementById('name1');
+    const emailInput = document.getElementById('email1');
+    const phoneInput = document.getElementById('phone1');
+    const addressInput = document.getElementById('address1');
+
+    const name = nameInput.value.trim();
+    const email = emailInput.value.trim();
+    const phone = phoneInput.value.trim();
+    const address = addressInput.value.trim();
+
+    const nameValid = /^[A-Za-z\s]+$/.test(name);
+    const emailValid = email.endsWith('@gmail.com');
+    const phoneValid = /^[0-9]+$/.test(phone);
+    const allFilled = name && email && phone && address;
+
+    if (!allFilled) {
+        alert("Please fill in all the fields.");
+        return;
+    }
+
+    if (!nameValid) {
+        alert("Name should contain only letters.");
+        return;
+    }
+
+    if (!emailValid) {
+        alert("Email must end with '@gmail.com'.");
+        return;
+    }
+
+    if (!phoneValid) {
+        alert("Phone number should contain only digits.");
+        return;
+    }
+
+
+    alert("Form submitted successfully!");
+
+
+    nameInput.value = '';
+    emailInput.value = '';
+    phoneInput.value = '';
+    addressInput.value = '';
+});
 
 
 
-        document.getElementById('btn').addEventListener('click', function () {
-            const name = document.getElementById('name1').value.trim();
-            const email = document.getElementById('email1').value.trim();
-            const phone = document.getElementById('phone1').value.trim();
-            const address = document.getElementById('address1').value.trim();
-
-            if (!name || !email || !phone || !address) {
-                alert("Please fill out all fields");
-            } else {
-                alert("Form submitted successfully");
-
-                // Clear all fields
-                document.getElementById('name1').value = '';
-                document.getElementById('email1').value = '';
-                document.getElementById('phone1').value = '';
-                document.getElementById('address1').value = '';
-            }
-        });
 
 
 
 
 
+document.getElementById('submitIcon').addEventListener('click', function () {
+    const emailInput = document.getElementById('email2');
+    const email = emailInput.value.trim();
 
-
-
-      document.getElementById('submitIcon').addEventListener('click', function () {
-      const emailInput = document.getElementById('email2');
-      const emailValue = emailInput.value.trim();
-
-      if (!emailValue) {
-        alert("Please enter your email address");
-      } else {
-        alert("Form submitted successfully");
+    if (email.endsWith('@gmail.com')) {
+        alert("Email submitted successfully!");
         emailInput.value = '';
-      }
-    });
+    } else {
+        alert("Please enter a valid Gmail address (must end with '@gmail.com').");
+    }
+});
 
 
 </script>
