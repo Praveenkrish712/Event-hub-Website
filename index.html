@@ -98,31 +98,33 @@
     <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/>
   </svg>
 
-  <h2>EVENT REGISTRATION</h2>
+  <form id="eventForm">
+      <h2>EVENT REGISTRATION</h2>
+      <input type="text" id="name2" placeholder="Name" />
+      <input type="email" id="email2" placeholder="Email" />
 
-  <input type="text" id="name" placeholder="Name">
-  <input type="email" id="email" placeholder="Email">
+      <select id="eventType">
+         <option value="">Event Type</option>
+         <option value="Workshop">Workshop</option>
+         <option value="Seminar">Seminar</option>
+         <option value="Conference">Conference</option>
+         <option value="Webinar">Webinar</option>
+      </select>
 
-  <select id="eventType">
-    <option value="">Event Type</option>
-    <option value="Workshop">Workshop</option>
-    <option value="Seminar">Seminar</option>
-    <option value="Conference">Conference</option>
-    <option value="Webinar">Webinar</option>
-  </select>
+      <input type="text" id="eventDetails" placeholder="Event Details" />
+      <input type="date" id="eventDate" />
+      <input type="time" id="eventTime" />
 
-  <input type="date" id="eventDate" />
-  <input type="time" id="eventTime" />
+      <select id="location">
+         <option value="">Location</option>
+         <option value="Miami">Miami</option>
+         <option value="New York">New York</option>
+         <option value="Los Angeles">Los Angeles</option>
+         <option value="Chicago">Chicago</option>
+      </select>
 
-  <select id="location">
-    <option value="">Location</option>
-    <option value="Miami">Miami</option>
-    <option value="New York">New York</option>
-    <option value="Los Angeles">Los Angeles</option>
-    <option value="Chicago">Chicago</option>
-  </select>
-
-  <button type="submit">Submit</button>
+      <button type="submit">Submit</button>
+  </form>
     </div>
     <div class="Event-hub">
         <div class="mobile-view">
@@ -362,7 +364,7 @@
                     <h1>Quick links</h1>
                     <p>Our expertise, as well as our<br>passion for web design, sets us<br>apart from other agencies.</p>
                     <form id="emailform">
-                        <input class="email" type="email" placeholder="E-mail Address" id="email2" required/>
+                        <input class="email" type="email" placeholder="E-mail Address" id="footerEmail" required/>
                         <svg id="submitIcon" xmlns="http://www.w3.org/2000/svg" hight="20px" width="20px" viewBox="0 0 448 512"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
                     </form>
                 </div>
@@ -609,7 +611,7 @@ document.getElementById('btn').addEventListener('click', function () {
 
 
 document.getElementById('submitIcon').addEventListener('click', function () {
-    const emailInput = document.getElementById('email2');
+    const emailInput = document.getElementById('footerEmail');
     const email = emailInput.value.trim();
 
     if (email.endsWith('@gmail.com')) {
@@ -642,34 +644,61 @@ document.getElementById('submitIcon').addEventListener('click', function () {
 
 
 
-
   document.getElementById('eventForm').addEventListener('submit', function(e) {
     e.preventDefault();
 
-    // Get the form field values
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const eventType = document.getElementById('eventType').value;
-    const eventDate = document.getElementById('eventDate').value;
-    const eventTime = document.getElementById('eventTime').value;
-    const location = document.getElementById('location').value;
+    const name2 = document.getElementById('name2').value.trim();
+    const email2 = document.getElementById('email2').value.trim();
+    const eventType2 = document.getElementById('eventType').value;
+    const eventDetails2 = document.getElementById('eventDetails').value.trim();
+    const eventDate2 = document.getElementById('eventDate').value;
+    const eventTime2 = document.getElementById('eventTime').value;
+    const location2 = document.getElementById('location').value;
 
-    // Check if all fields are filled
-    if (!name || !email || !eventType || !eventDate || !eventTime || !location) {
-      alert('Please fill in all the fields.');
-    } 
-    // Validate the name (it must contain only text)
-    else if (!/^[a-zA-Z\s]+$/.test(name)) {
-      alert('Name must contain only letters.');
-    } 
-    // Validate the email (it must end with "@gmail.com")
-    else if (!email.endsWith('@gmail.com')) {
-      alert('Email must end with "@gmail.com".');
-    } 
-    else {
-      alert('Thank you for your interest!');
+    // Validation
+    const nameValid2 = /^[a-zA-Z\s]+$/.test(name2);
+    const emailValid2 = /^[^\s@]+@gmail\.com$/.test(email2);
+
+    if (!nameValid2) {
+      alert("Name must contain letters only.");
+      return;
     }
+
+    if (!emailValid2) {
+      alert("Email must end with @gmail.com.");
+      return;
+    }
+
+    if (!eventType2) {
+      alert("Please select an event type.");
+      return;
+    }
+
+    if (!eventDetails2) {
+      alert("Please enter event details.");
+      return;
+    }
+
+    if (!eventDate2) {
+      alert("Please select a date.");
+      return;
+    }
+
+    if (!eventTime2) {
+      alert("Please select a time.");
+      return;
+    }
+
+    if (!location2) {
+      alert("Please select a location.");
+      return;
+    }
+
+    // All valid
+    alert("Thank you for your interesting!");
+    document.getElementById("eventForm").reset();
   });
+  
 </script>
         
 </body>

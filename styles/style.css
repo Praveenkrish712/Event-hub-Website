@@ -223,6 +223,14 @@
   gap: 15px;
 }
 
+#eventForm{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
 .event-register input{
   border: 0;
   padding: 10px 30px 10px 5px;
